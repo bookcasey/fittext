@@ -1,0 +1,6 @@
+@import compass
+
+=fittext($min-media, $max-media, $min-font, $max-font: 0, $increment: 50px, $compressor: 10) 
+  @for $i from 1 through ($max-media - $min-media)/$increment
+    @media screen and (min-width: $min-media + ($i * $increment))
+      font-size: floor($min-font + ($i / $compressor * $increment))
