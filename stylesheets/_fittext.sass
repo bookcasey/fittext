@@ -6,8 +6,8 @@
   @while ($media <= $max-media) and ($font-size <= $max-font-size)
     @media screen and (min-width: $media)
       font-size: $font-size
-    $font-size: if($round, font-sizer(ceil($font-size, $font-increment, $ratio)), font-sizer($font-size, $font-increment, $ratio))
+    $font-size: if($round, ceil(font-sizer($font-size, $font-increment, $ratio)), font-sizer($font-size, $font-increment, $ratio))
     $media: $media + $media-increment
 
-@function font-sizer($ro, $fs, $fi, $ra)
+@function font-sizer($fs, $fi, $ra)
   @return ($fs + $fi) * $ra
