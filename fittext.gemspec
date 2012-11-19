@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.1"
-  s.date = "2012-11-17"
+  s.version = "0.0.3"
+  s.date = "2012-11-19"
 
   # Gem Details
   s.name = "fittext"
