@@ -54,5 +54,11 @@ An extra value to get font sizes to increase non-linearly. Default `1`.
 
 Boolean. Rounds font size with `ceil()`. Default `false`.
 
+## Usage
+
+h1
+  font-size: 6em // For browsers that don't support media queries.
+  @include fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $font-increment: 1.5, $ratio: 1, $round: false)
+
 
 
