@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.4"
-  s.date = "2012-11-19"
+  s.version = "0.0.5"
+  s.date = "2012-12-2"
 
   # Gem Details
   s.name = "fittext"
   s.authors = ["Casey Olson"]
-  s.summary = %q{Compass extension for inflating text.}
-  s.description = %q{Compass extension for inflating text.}
+  s.summary = %q{Compass extension for inflating type with media queries.}
+  s.description = %q{Compass extension for inflating type with media queries.}
   s.email = "casey.m.olson@gmail.com"
   s.homepage = "http://www.bookcasey.com/fittext/"
 
