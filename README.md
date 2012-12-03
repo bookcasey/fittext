@@ -2,6 +2,8 @@
 
 Compass extenstion / Sass mixin for inflating web type by generating media queries with progressively larger font sizes.
 
+[Example](http://www.bookcasey.com/fittext) on my personal site.
+
 ## Installation
 
 From the command line:
@@ -56,9 +58,9 @@ Boolean. Rounds font size with `ceil()`. Default `false`.
 
 ## Usage
 
-h1
-  font-size: 6em // For browsers that don't support media queries.
-  @include fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $font-increment: 1.5, $ratio: 1, $round: false)
+    h1
+      font-size: 6em // For browsers that don't support media queries.
+      @include fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $font-increment: 1.5, $ratio: 1, $round: false)
 
 
 
