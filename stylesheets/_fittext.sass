@@ -1,8 +1,11 @@
 @import compass
 
-=fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $font-increment: 1.5, $ratio: 1, $round: false)
+=fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $font-increment: false, $ratio: 1, $round: false)
   $font-size: $min-font-size
   $media: $min-media
+  $mrange: $max-media - $min-media
+  $msteps: $mrange / ($media-increment*1px)
+  $font-increment: if($font-increment == false, ($max-font-size / $msteps) - ($min-font-size / $msteps), $font-increment)
   @while ($media <= $max-media) and ($font-size <= $max-font-size)
     @media screen and (min-width: $media)
       font-size: $font-size
@@ -10,4 +13,5 @@
     $media: $media + $media-increment
 
 @function font-sizer($fs, $fi, $ra)
-  @return ($fs + $fi) * $ra
+  @return (($fs/1em) + $fi) * $ra
+

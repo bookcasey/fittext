@@ -1,5 +1,7 @@
 # [Fittext](http://www.bookcasey.com/fittext)
 
+## This fork of Fittext does not require the `$font-increment` parameter. That variable is calculated internally.
+
 Compass extenstion / Sass mixin for inflating web type by generating media queries with progressively larger font sizes.
 
 [Example](http://www.bookcasey.com/fittext) on my personal site.
@@ -22,7 +24,7 @@ Installing into your project:
 
 ## Arguments
 
-    @include fittext($min-media, $max-media, $min-font-size, $max-font-size, $media-increment, $font-increment, $ratio, $round)
+    @include fittext($min-media, $max-media, $min-font-size, $max-font-size, $media-increment, $ratio, $round)
 
 ### `$min-media`
 
@@ -50,7 +52,7 @@ Sets increase amount of font size for each media queries.
 
 ### `$ratio`
 
-An extra value to get font sizes to increase non-linearly. Default `1`. 
+An extra value to get font sizes to increase non-linearly. Default `1`.
 
 ### `$round`
 
@@ -60,7 +62,7 @@ Boolean. Rounds font size with `ceil()`. Default `false`.
 
     h1
       font-size: 6em // For browsers that don't support media queries.
-      @include fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $font-increment: 1.5, $ratio: 1, $round: false)
+      @include fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $ratio: 1, $round: false)
 
 
 
